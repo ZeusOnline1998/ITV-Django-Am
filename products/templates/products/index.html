@@ -1,0 +1,16 @@
+{% extends 'products/base.html' %}
+
+{% block content %}
+    
+    {% for product in products %}
+        <div style="background-color: cornflowerblue; border: 2px solid black; width: 50%; margin: 50px 0px 0px 20px;">
+            <article>
+                <h2>{{product.name}}</h2>
+                <p>Description: {{product.desc}}</p>
+                <strong>Price: {{product.price}}</strong><br>
+                <time>Release date: {{product.release_date}}</time>
+            </article>
+        </div>
+
+    {% endfor %}
+{% endblock %}
